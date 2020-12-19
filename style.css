@@ -1,3 +1,5 @@
+
+
 body {
     background-color: #BDB2FF;
 }
@@ -11,3 +13,29 @@ body {
 .btn-outline-info {
     color:#002766; 
 }
+
+.container {
+    margin: auto;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+  }
+
+  
+#main {
+    margin-bottom: 20px;
+    font-size: 100px;
+    width: 100%;
+    height: 25px;
+  }
+
+  #read {
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+    height: 25px;
+  }
+
+  .hidden {
+    display:none;
+  }
