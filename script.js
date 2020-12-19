@@ -26,12 +26,12 @@ var questions = ["question1", "question2", ""]
 
     question4 = {
         title: "In conditional statements which words are NOT used?"
-        answer: ["If", "Else", "Else If", "Than"]
+        answers: ["If", "Else", "Else If", "Than"]
         correctAnswer: "Than"
     }
 
     question5= {
         title: "A function is a block of code designed to perform a particular _____?"
-        answer:["Data", "Task", "Loop","Condition"]
+        answers:["Data", "Task", "Loop","Condition"]
         correctAnswer: "Task"
     }
