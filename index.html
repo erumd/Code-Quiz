@@ -8,8 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     <!-- used timer from https://apps.elfsight.com/ -->
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-64aea21f-23ad-4144-b82b-b44d28eb86c6"></div>
+    <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-64aea21f-23ad-4144-b82b-b44d28eb86c6"></div> -->
 
    <!-- link CSS style sheet -->
    <link rel= "stylesheet" href=style.css >
@@ -20,7 +20,15 @@
 
 </head>
 <body>
-    <h1>Code Quiz</h1>
+    <div  class= "form">
+        <h1>Code Quiz</h1>
+        <p> Directions: You have 60 seconds to answer 5 question. If you get an answer wrong you will lose time.
+             Click the start button to begin.</p>
+        <button type="button" class="btn btn-outline-danger btn-lg">Start</button> 
+        <h2 id="countdown"></h2>
+        <p id="main"></p>
+
+    </div>
     <!-- Start Button 
     Question event listener for every choice 
 5 question, worth 10 points each 
@@ -28,6 +36,8 @@
 if they get answer right > message "correct"
 if missed question >take away 10 seconds and message "Wrong"
 high scrore 
+
+
 
 -->
 <div>
