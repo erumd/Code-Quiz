@@ -33,22 +33,15 @@ var startBtn = document.getElementById('Start');
 //   }
 // }, 1000);
 
-
-
-
-
-
-
 // activity 8 countdown
+
+
 var secondsLeft = 60;
 
 function setTime() {
   var timerInterval = setInterval(function() {
     secondsLeft--;
     timeEl.textContent = secondsLeft + " seconds left for quiz";
-
-    function myFunction() {
-        document.getElementByClass("tn btn-outline-danger btn-lg").innerHTML = "";
     
 
     if(secondsLeft === 0) {
@@ -65,6 +58,11 @@ function sendMessage() {
 }
 
 setTime();
+
+
+function myFunction() {
+    document.getElementByClass("tn btn-outline-danger btn-lg").innerHTML = "";
+    return;
 
 
 // trired activity 9

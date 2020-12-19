@@ -1,4 +1,9 @@
-
+.container {
+    margin: auto;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+  }
 
 body {
     background-color: #BDB2FF;
@@ -14,14 +19,9 @@ body {
     color:#002766; 
 }
 
-.container {
-    margin: auto;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-  }
 
-  
+
+
 #main {
     margin-bottom: 20px;
     font-size: 100px;
