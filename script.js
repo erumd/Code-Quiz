@@ -1,7 +1,16 @@
 // start button 
-var timerEl = document.getElementById('countdown');
-var mainEl = document.getElementById('main');
-var startBtn = document.getElementById('Start');
+// var timerEl = document.getElementById('countdown');
+// var mainEl = document.getElementById('main');
+// var startBtn = document.getElementById('Start');
+
+
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide(1000);
+  });
+});
+
 
 // W3 timer
 // Set the date we're counting down to
@@ -35,34 +44,32 @@ var startBtn = document.getElementById('Start');
 
 // activity 8 countdown
 
-
-var secondsLeft = 60;
-
-function setTime() {
-  var timerInterval = setInterval(function() {
-    secondsLeft--;
-    timeEl.textContent = secondsLeft + " seconds left for quiz";
+// NOT WORKING TIMER********************************************
+// var secondsLeft = 60;
+// function setTime() {
+//   var timerInterval = setInterval(function() {
+//     secondsLeft--;
+//     timeEl.textContent = secondsLeft + " seconds left for quiz";
     
+//     if(secondsLeft === 0) {
+//       clearInterval(timerInterval);
+//       sendMessage();
+//     }
 
-    if(secondsLeft === 0) {
-      clearInterval(timerInterval);
-      sendMessage();
-    }
+//   }, 1000);
+// }
 
-  }, 1000);
-}
+// function sendMessage() {
+//   timeEl.textContent = " Timer Ended"
 
-function sendMessage() {
-  timeEl.textContent = " Timer Ended"
+// }
 
-}
-
-setTime();
+// setTime();
 
 
-function myFunction() {
-    document.getElementByClass("tn btn-outline-danger btn-lg").innerHTML = "";
-    return;
+// function myFunction() {
+//     document.getElementByClass("tn btn-outline-danger btn-lg").innerHTML = "";
+//     return;
 
 
 // trired activity 9
@@ -92,10 +99,39 @@ function myFunction() {
 //   }, 1000);
 // }
 
+function startTimer(duration, display) {
+  var timer = duration, seconds;
+  setInterval(function () {
+      // minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 10, 10);
+
+      // minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds: seconds ;
+
+      // display.textContent = minutes + ":" + seconds;
+      display.textContent = seconds;
 
 
+      if (--timer=== 0) {
+          timer = duration;
+          sendMessage();
+      }
+  }, 1000);
+}
 
-var questions = ["question1", "question2", ""]
+function sendMessage() {
+  timerEl.textContent = " Timer Ended"
+  
+  }
+
+  window.onload = function () {
+    var countdown = 60 * 5,
+        display = document.querySelector('#time');
+    startTimer(countdown, display);
+};
+
+
+var questions = ["question1", "question2", "question3", "question4", "question5",]
 
 // WHat do you use to style your html?
     // A.CSS
